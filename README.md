@@ -11,7 +11,6 @@ Github Action和SCF实现代理池的方式不一样：**SCF可以用网关触�
 下载合适的版本 这里下载的是linux_amd64_server.tar.gz
 执行`tar -axvf linux_amd64_server.tar.gz`进行解压
 ![](https://github.com/sh3d0ww01f/WaterDragon/blob/master/img/222.png)
-![](https://github.com/sh3d0ww01f/nim_shellloader/blob/master/image/1.gif)
 #### 2.然后去修改配置
 `cd conf`
 `vim nps.conf`
