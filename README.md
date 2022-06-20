@@ -10,7 +10,7 @@ Github Action和SCF实现代理池的方式不一样：**SCF可以用网关触�
 下载地址 [https://github.com/ehang-io/nps/releases/tag/v0.26.10](https://github.com/ehang-io/nps/releases/tag/v0.26.10)
 下载合适的版本 这里下载的是linux_amd64_server.tar.gz
 执行`tar -axvf linux_amd64_server.tar.gz`进行解压
-![](https://github.com/sh3d0ww01f/WaterDragon/blob/master/img/222.png)
+![](https://raw.githubusercontent.com/sh3d0ww01f/WaterDragon/main/img/222.png)
 #### 2.然后去修改配置
 `cd conf`
 `vim nps.conf`
@@ -18,7 +18,7 @@ Github Action和SCF实现代理池的方式不一样：**SCF可以用网关触�
 ###### ①.首先是 web_password
 **这个改的越复杂越好** 是nps的管理面板 不过这里不用gui的 用的是webapi，用不到gui的密码，如果是默认的123，会被有心人搞破坏
 ###### ②.然后是这里
-![](https://github.com/sh3d0ww01f/WaterDragon/blob/master/img/333.png)
+![](https://raw.githubusercontent.com/sh3d0ww01f/WaterDragon/main/img/333.png)
 把`auth_key`前面的注释去掉，然后修改auth_key的值
 然后把`auth_crypt_key`修改为别的16位长度的一个字符串 （默认也可以
 **然后把auth_key 记住备用**
@@ -34,47 +34,47 @@ Github Action和SCF实现代理池的方式不一样：**SCF可以用网关触�
 ##### 前往[https://github.com/settings/tokens](https://github.com/settings/tokens)
 
 
-![](https://github.com/sh3d0ww01f/WaterDragon/blob/master/img/444.png)
-![](https://github.com/sh3d0ww01f/WaterDragon/blob/master/img/555.png)
-![](https://github.com/sh3d0ww01f/WaterDragon/blob/master/img/666.png)
+![](https://raw.githubusercontent.com/sh3d0ww01f/WaterDragon/main/img/444.png)
+![](https://raw.githubusercontent.com/sh3d0ww01f/WaterDragon/main/img/555.png)
+![](https://raw.githubusercontent.com/sh3d0ww01f/WaterDragon/main/img/666.png)
 **记住备用**
 #### 配置脚本
 首先下载脚本
 `git clone https://github.com/sh3d0ww01f/WaterDragon.git`
 然后修改`main.py`文件
-![](https://github.com/sh3d0ww01f/WaterDragon/blob/master/img/777.png)
+![](https://raw.githubusercontent.com/sh3d0ww01f/WaterDragon/main/img/777.png)
    ①**api的位置填上自己的api地址(http://vps_ip:web_port，如果没改过前面的web_port 则就是http://vps_ip:8080)**
  ②**auth_key 写上更改过的auth_key**
  ③**token写github获取的token**
 # 运行脚本
 `python3 main.py`
-![](https://github.com/sh3d0ww01f/WaterDragon/blob/master/img/888.png)
+![](https://raw.githubusercontent.com/sh3d0ww01f/WaterDragon/main/img/888.png)
 **①.输入socks5 进入隧道管理 我们需要先加一个**
-![](https://github.com/sh3d0ww01f/WaterDragon/blob/master/img/999.png)
+![](https://raw.githubusercontent.com/sh3d0ww01f/WaterDragon/main/img/999.png)
 出现成功连接WebApi则说明api配置正确
 **②.输入add 增加socks5隧道**
-![](https://github.com/sh3d0ww01f/WaterDragon/blob/master/img/1111.png)
+![](https://raw.githubusercontent.com/sh3d0ww01f/WaterDragon/main/img/1111.png)
 **密钥随意写，端口只要外网能通就可以，加密的话1代表要加密，0代表不加密**
 **③.配置好了新隧道，我们回到菜单使用**
 输入	`back` 回到菜单,然后**键入`manager`进入Github Action管理**
-![](https://github.com/sh3d0ww01f/WaterDragon/blob/master/img/2222.png)
+![](https://raw.githubusercontent.com/sh3d0ww01f/WaterDragon/main/img/2222.png)
 输入`select`选择要连接的socks5隧道
 这里选择新增的 客户端ID为21的
-![](https://github.com/sh3d0ww01f/WaterDragon/blob/master/img/3333.png)
+![](https://raw.githubusercontent.com/sh3d0ww01f/WaterDragon/main/img/3333.png)
 
 出现`start success`即为启动成功
 
-![](https://github.com/sh3d0ww01f/WaterDragon/blob/master/img/4444.png)
+![](https://raw.githubusercontent.com/sh3d0ww01f/WaterDragon/main/img/4444.png)
 配置一下 配置好 就可以用这个代理了
 
 # 效果
 ![ ](https://raw.githubusercontent.com/sh3d0ww01f/WaterDragon/main/img/1.png)
-![](https://github.com/sh3d0ww01f/WaterDragon/blob/master/img/2.png)
-![](https://github.com/sh3d0ww01f/WaterDragon/blob/master/img/3.png)
-![](https://github.com/sh3d0ww01f/WaterDragon/blob/master/img/4.png)
-![](https://github.com/sh3d0ww01f/WaterDragon/blob/master/img/5.png)
+![](https://raw.githubusercontent.com/sh3d0ww01f/WaterDragon/main/img/2.png)
+![](https://raw.githubusercontent.com/sh3d0ww01f/WaterDragon/main/img/3.png)
+![](https://raw.githubusercontent.com/sh3d0ww01f/WaterDragon/main/img/4.png)
+![](https://raw.githubusercontent.com/sh3d0ww01f/WaterDragon/main/img/5.png)
 # 停止Action
-![](https://github.com/sh3d0ww01f/WaterDragon/blob/master/img/5555.png)
+![](https://raw.githubusercontent.com/sh3d0ww01f/WaterDragon/main/img/5555.png)
 然后键入0 即可暂停现在运行中的GithubAction机子
 出现“取消运行成功” 则代表成功暂停运行
 # 后序
