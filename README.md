@@ -1,4 +1,5 @@
 # WaterDragon 水龙 v1.0
+和水一样 灵活多变
 ## 用Github Action实现IP代理功能 也可翻墙
 ### 核心
 这个项目的**核心是NPS[https://github.com/ehang-io/nps] + Github Action**
