@@ -68,7 +68,7 @@ Github Action和SCF实现代理池的方式不一样：**SCF可以用网关触�
 配置一下 配置好 就可以用这个代理了
 
 # 效果
-![](https://github.com/sh3d0ww01f/WaterDragon/blob/master/img/1.png)
+![ ](https://raw.githubusercontent.com/sh3d0ww01f/WaterDragon/main/img/1.png)
 ![](https://github.com/sh3d0ww01f/WaterDragon/blob/master/img/2.png)
 ![](https://github.com/sh3d0ww01f/WaterDragon/blob/master/img/3.png)
 ![](https://github.com/sh3d0ww01f/WaterDragon/blob/master/img/4.png)
