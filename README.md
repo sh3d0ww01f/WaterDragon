@@ -1,7 +1,7 @@
 # WaterDragon 水龙
 ## 用Github Action实现IP代理功能 也可翻墙
 ### 核心
-这个项目的**核心是NPS + Github Action**
+这个项目的**核心是NPS[https://github.com/ehang-io/nps] + Github Action**
 Github Action和SCF实现代理池的方式不一样：**SCF可以用网关触发，但是Action不是**，Action是给你提供了一台可出不可入的如同私人电脑一般的一个虚拟环境，所以我们如果要想用代理到Action然后去访问 就要我们的**vps 帮忙，先做个穿透，然后转发**
 ## Tips:代理出去的IP是微软云的 而且IP众多 也不容易被ban
 # 使用方法
