@@ -2,25 +2,28 @@ import json
 import hashlib
 import base64
 import time
-import requests
+
+global port, clientid
 global port, clientid, client_all
-global api, auth_kkey
+import requests
+
 client_all = {}
 port, clientid = [], []
-
+split_str = "\n|\n-->"
+global api, auth_kkey
 # -------------------------------------------------------------
-api = "http://xxxxxxx:8080"
-auth_kkey = "test"
-token = "token"  # github_token
+api = "http://120.25.74.102:8080"
+auth_kkey = "githubgithub"
+token = "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"  # github_token
 # ------------------------------------------------------------
 
-CreatNew_name = "WaterDragon"
+CreatNew_name = "WaterDragon3"
 headers = {
     "Authorization": "token " + token,
     "Accept": "application/vnd.github.v3+json"
 }
 BaseInfo = "https://api.github.com/user"
-split_str = "\n|\n-->"
+
 
 # ------------------------------------------------------------nps--------------------------------
 def getkey():
@@ -231,7 +234,7 @@ def CreatNew(CreatNew_name, headers):
 
 
 def Use(owner, repo, headers, command):
-    UploadMainYml(owner, repo, headers, command)
+    
     onestep = requests.put(f"https://api.github.com/user/starred/{owner}/{repo}", headers=headers)
     if (onestep.status_code == 204):
         print("[+] Start Success")
@@ -240,6 +243,7 @@ def Use(owner, repo, headers, command):
 
 def Enable_workflow(owner, repo, headers):
     raw = requests.get(f"https://api.github.com/repos/{owner}/{repo}/actions/workflows", headers=headers)
+    #print(raw.text)
     workflow_id = json.loads(raw.text)["workflows"][0]["id"]
     r = requests.put(f"https://api.github.com/repos/{owner}/{repo}/actions/workflows/{workflow_id}/enable",
                      headers=headers)
@@ -273,6 +277,7 @@ def select():
 
 def run_action(username, repo, headers, command):
     CreatNew(repo, headers)  # Creat
+    UploadMainYml(username, repo, headers, command)
     time.sleep(1)
     Enable_workflow(username, repo, headers)
     Use(username, repo, headers, command)
@@ -331,6 +336,7 @@ while True:
         resp = checkd(BaseInfo, headers)
         if (not resp):
             current = "menu"
+            exit(0)
         response_raw = resp.text
         response = json.loads(response_raw)
         username = response["login"]
