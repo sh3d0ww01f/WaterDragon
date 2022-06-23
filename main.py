@@ -12,12 +12,12 @@ port, clientid = [], []
 split_str = "\n|\n-->"
 global api, auth_kkey
 # -------------------------------------------------------------
-api = "http://120.25.74.102:8080"
-auth_kkey = "githubgithub"
-token = "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"  # github_token
+api = "http://xxxxxxxx.xxx.xxxx.xxx:xx"
+auth_kkey = "xxxxxxxxx"
+token = "ghp_xxxxxxxxxxxxxxxxx"  # github_token
 # ------------------------------------------------------------
 
-CreatNew_name = "WaterDragon3"
+CreatNew_name = "WaterDragon"
 headers = {
     "Authorization": "token " + token,
     "Accept": "application/vnd.github.v3+json"
