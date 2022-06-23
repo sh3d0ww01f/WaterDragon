@@ -20,6 +20,7 @@ we change these two files in total
 ![](https://raw.githubusercontent.com/sh3d0ww01f/WaterDragon/main/img/333.png)
 remove the comment before `auth_key`,and change the value of `auth_key`
 **advice:**change `auth_crypt_key` 
+
 **then remember the auth_key we changed  and hold it in reserve for next step**
 ##### ③.http_proxy_port
 Advice:U had batter to change it ,because it maybe conflict with the service which listen 80 port  **such as apache，nginx**
@@ -40,9 +41,12 @@ Firstly,we download the script:
 `git clone https://github.com/sh3d0ww01f/WaterDragon.git`
 and then modify file named `main_En.py`
 ![](https://raw.githubusercontent.com/sh3d0ww01f/WaterDragon/main/img/777.png)
-   ①**type the address of your Api :api(http://vps_ip:web_port，if u neven change web_port, the Api is http://vps_ip:8080)**
+ ①**type the address of your Api :api(http://vps_ip:web_port，if u neven change web_port, the Api is http://vps_ip:8080)**
+ 
  ②**type your auth_key behind**
+ 
  ③**type your token **
+ 
 # Run the script
 `python3 main_En.py`
 ![](https://raw.githubusercontent.com/sh3d0ww01f/WaterDragon/main/img/111en.png)
