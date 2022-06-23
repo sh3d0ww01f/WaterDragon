@@ -62,6 +62,8 @@ I choose No. 19 as an example
 when it appear `start success` , it means start successfully
 
 ![](https://raw.githubusercontent.com/sh3d0ww01f/WaterDragon/main/img/4444.png)
+
+
 then we connect it 
 
 # Result
@@ -73,5 +75,9 @@ then we connect it
 # How to Stop Action
 ![](https://raw.githubusercontent.com/sh3d0ww01f/WaterDragon/main/img/666en.png)
 ![](https://raw.githubusercontent.com/sh3d0ww01f/WaterDragon/main/img/777en.png)
+
+
 then we type "0" to stop the GithubAction which in_progress
+
+
 if "stop process succcessfully" ,that means stop successfully
