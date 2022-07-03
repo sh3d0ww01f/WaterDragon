@@ -89,7 +89,6 @@ when it appear `start success` , it means start successfully
 then we connect it 
 
 # Result
-![ ](https://raw.githubusercontent.com/sh3d0ww01f/WaterDragon/main/img/1.png)
 ![](https://raw.githubusercontent.com/sh3d0ww01f/WaterDragon/main/img/2.png)
 ![](https://raw.githubusercontent.com/sh3d0ww01f/WaterDragon/main/img/3.png)
 ![](https://raw.githubusercontent.com/sh3d0ww01f/WaterDragon/main/img/4.png)
