@@ -38,7 +38,7 @@ Github Action和SCF实现代理池的方式不一样：**SCF可以用网关触�
 #### 3.获取github_token
 ##### 前往[https://github.com/settings/tokens](https://github.com/settings/tokens)
 
-里面的勾勾要全勾上哦
+###                  里面勾勾要全勾上哦
 
 ![](https://raw.githubusercontent.com/sh3d0ww01f/WaterDragon/main/img/444.png)
 ![](https://raw.githubusercontent.com/sh3d0ww01f/WaterDragon/main/img/555.png)
