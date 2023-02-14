@@ -45,9 +45,12 @@ def list_tunnel():
         "limit": 10,
         "search": ""
     }
-    raw = json.loads(requests.post(url=url, data=data).text)
-    for item in raw["rows"]:
-        port.append(item["Port"])
+    try:
+        raw = json.loads(requests.post(url=url, data=data).text)
+        for item in raw["rows"]:
+            port.append(item["Port"])
+    except:
+        print("[-] 获取tunnel失败");exit(0)
 
 
 def list_all():
@@ -60,10 +63,13 @@ def list_all():
         "start": 0,
         "limit": 10
     }
-    raw = json.loads(requests.post(url=url, data=data).text)
-    bridgeport = raw["bridgePort"]
-    ip = raw["ip"]
-    id = 0
+    try:
+        raw = json.loads(requests.post(url=url, data=data).text)
+        bridgeport = raw["bridgePort"]
+        ip = raw["ip"]
+        id = 0
+    except:
+        print("[-] 获取client失败");exit(0)
     for item in raw["rows"]:
         # print(item)
         print("客户端ID:", item["Id"], split_str, "备注:", item["Remark"], split_str, "加密情况:", item["Cnf"]["Crypt"],
@@ -104,7 +110,10 @@ def add_new(OutsidePort, vkey, ifcrypt, remark):
             "limit": 10
         }
         raw = json.loads(requests.post(url=url, data=data).text)
-
+        try:
+            tmp = raw["rows"][-1]["Id"]
+        except:
+            print("[-] 添加失败");exit(0)
         tunnel_data = {
             "auth_key": auth_key,
             "timestamp": time,
@@ -256,8 +265,6 @@ def Enable_workflow(owner, repo, headers):
         print(f"[+] Enable workflow_id:{workflow_id}")
     else:
         print(r.text)
-
-
 def checkd(BaseInfo, headers):
     resp = requests.get(BaseInfo, headers=headers)
     if (resp.status_code != 200):
@@ -267,8 +274,6 @@ def checkd(BaseInfo, headers):
         return 0
     else:
         return resp
-
-
 def select():
     list_all()
     id = input("输入选择的客户端id:")
